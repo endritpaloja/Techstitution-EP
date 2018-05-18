@@ -6,3 +6,5 @@ Projekti per Prokurim
 3. cd Techstitution-EP
 4. npm install
 5. npm start (or nodemon)
+
+6. Për të drejta (username:admin, password:admin)
