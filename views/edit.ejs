@@ -1,0 +1,126 @@
+<html>
+<head>
+    <% include partials/head %>
+</head>
+
+<body>
+
+	<% include partials/header %>
+
+	<div class="kontrata">
+	<div class="container">
+		<div class="row">
+		<div class="offset-md-3 col-md-6">
+		<form action="/kontratat/update/<%= doc._id %>" method="post">
+      <div class="row">
+			<div class="col-md-6">
+			<h2 style="color:#2196F3;"><b>Edito kontratën:</b></h2>
+			<br/>
+			</div>
+    </div>
+      <div class="row">
+			<div class="col-md-12">
+			<h4><b>Prokurimi:</b></h4>
+			</div>
+    </div>
+    <div class="row">
+				<div class="col-md-6">
+					<label for="Nr.rendor"> Nr.rendor i prokurimit</label><br/>
+					<input class="form-control" name="Nrrendor" type="number" placeholder="Nr.rendor i prokurimit" value="<%= doc.Nrrendor%>" required />
+				</div>
+				<div class="col-md-6">
+					<label for="Lloji"> Lloji i prokurimit</label><br/>
+					<input class="form-control" name="Lloji" type="text" placeholder="Lloji i prokurimit" value="<%= doc.Lloji %>" />
+				</div>
+      </div>
+        <div class="row">
+				<div class="col-md-12 ">
+					<br/>
+					<label for="Aktiviteti">Aktiviteti i prokurimit</label><br/>
+					<input class="form-control" name="Aktiviteti" type="text" placeholder="Aktiviteti i prokurimit" value="<%= doc.Aktiviteti%>"/>
+					<br/>
+				</div>
+      </div>
+        <div class="row">
+				<div class="col-md-12">
+					<h4><b>Datat:</b></h4>
+				</div>
+      </div>
+
+      <div class="row">
+					<div class="col-md-6">
+						<label for="Inicimi"> Data e inicimit të aktiviteteve <br/> të prokurimit</label>
+						<br/>
+						<input class="form-control" name="Inicimi" type="date" value="<%= doc.Inicimi %>" required />
+					</div>
+					<div class="col-md-6">
+						<label for="Publikimi"> Data e publikimit <br/> të shpalljës</label>
+						<br/>
+						<input class="form-control" name="Publikimi" type="date" value="<%= doc.Publikimi %>" required />
+					</div>
+        </div>
+
+        <div class="row">
+					<div class="col-md-12">
+					<br/>
+						<label for="Nenshkrimi"> Data e nënshkrimit të kontratës</label>
+						<br/>
+						<input class="form-control" name="Nenshkrimi" type="date" value="<%= doc.Nenshkrimi %>" required />
+					</div>
+        </div>
+        <div class="row">
+					<div class="col-md-12">
+					<br/>
+						<label for="Afati1"> Afatet për implementimin e kontratës</label>
+					</div>
+						<div class="col-md-6">
+							<input class="form-control" name="Afati1" type="date" value="<%= doc.Afati1 %>" required />
+							<br/>
+						</div>
+						<div class="col-md-6">
+							<input class="form-control" name="Afati2" type="date" value="<%= doc.Afati2 %>" required />
+						</div>
+          </div>
+          <div class="row">
+					<div class="col-md-12">
+						<label for="Preliminare"> Data e përmbylljes së kontratës (data e pranimit <br/> të perkohshem/preliminar)</label>
+						<br/>
+						<input class="form-control" name="Preliminare" type="date" value="<%= doc.Preliminare %>" required />
+					</div>
+        </div>
+        <div class="row">
+					<div class="col-md-12">
+					<br/>
+					<br/>
+					<h4><b>Çmimi dhe të dhënat tjera:</b></h4>
+					<br/>
+					</div>
+        </div>
+        <div class="row">
+					<div class="col-md-6">
+						<label for="Cmimi"> Çmimi i kontratës (duke përfshirë <br/> të gjitha taksat)</label>
+						<br/>
+						<input class="form-control" name="Cmimi" type="text" placeholder="Cmimi i kontrates" value="<%= doc.Cmimi %>" required />
+					</div>
+						<div class="col-md-6">
+							<label for="Totali"> Çmimi total i paguar <br/> për kontratën</label>
+							<br/>
+							<input class="form-control" name="Totali" type="text" placeholder="Cmimi total" value="<%= doc.Totali %>" required />
+						</div>
+          </div>
+          <div class="row">
+					<div class="col-md-12">
+						<br/>
+						<label for="Kontraktuesi"> Emri i të cilit i është dhënë kontrata</label>
+						<br/>
+						<input class="form-control" name="Kontraktuesi" type="text" placeholder="Emri dhe mbiemri" value="<%= doc.Kontraktuesi %>" required />
+					<br/>
+					</div>
+        </div>
+			<button type="submit" class="btn btn-primary btn-block">Save</button>
+	</form>
+	</div>
+	</div>
+</div>
+</body>
+</html>

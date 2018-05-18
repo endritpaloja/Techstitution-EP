@@ -1,0 +1,61 @@
+<html>
+<head>
+    <% include partials/head %>
+</head>
+
+<body>
+  <% include partials/header %>
+
+  <div class="kontrata">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+          <h1>Lista e Kontratave</h1>
+          <div class="table-responsive">
+              <table class="table table-bordered">
+                <tr>
+                  <th>#</th>
+                  <th>Lloji i prokurimit</th>
+                  <th>Aktiviteti i prokurimit</th>
+                  <th>Data e Inicimit</th>
+                  <th>Data e Publikimit</th>
+                  <th>Data e Nenshkrimit</th>
+                  <th>Afatet e implementimit</th>
+                  <th>Data e permbylljes</th>
+                  <th>Cmimi i kontrates</th>
+                  <th>Cmimi total</th>
+                  <th>Kontraktuesi</th>
+                  <th>Show</th>
+                  <% if (user) { %>
+                    <th>Edit</th>
+                    <th><i class="fa fa-trash"></i></th>
+                  <% } %>
+                </tr>
+                <% docs.map((doc) => { %>
+                  <tr>
+                    <td><%= doc.Nrrendor %></td>
+                    <td><%= doc.Lloji %></td>
+                    <td><%= doc.Aktiviteti %></td>
+                    <td><%= moment(doc.Inicimi).format('DD.MM.YYYY') %></td>
+                    <td><%= moment(doc.Publikimi).format('DD.MM.YYYY') %></td>
+                    <td><%= moment(doc.Nenshkrimi).format('DD.MM.YYYY') %></td>
+                    <td><%= moment(doc.Afati1).format('DD.MM.YYYY') %> - <%= moment(doc.Afati2).format('DD.MM.YYYY') %></td>
+                    <td><%= moment(doc.Preliminare).format('DD.MM.YYYY') %></td>
+                    <td><%= doc.Cmimi %> &euro;</td>
+                    <td><%= doc.Totali %> &euro;</td>
+                    <td><%= doc.Kontraktuesi %></td>
+                    <td><a href="https://krpp.rks-gov.net/krpp/PageFiles/File/ligjet/english/2012/AIPPRC-02-2012.pdf" target="_blank"> Show </a></td>
+                    <% if (user) { %>
+                      <td><a href="/kontratat/edit/<%= doc._id %>">Edit</a></td>
+                      <td><a href="/kontratat/delete/<%= doc._id %>"><i class="fa fa-trash"></i></a></td>
+                    <% } %>
+                  </tr>
+                  <% }); %>
+                </table>
+              </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+</html>

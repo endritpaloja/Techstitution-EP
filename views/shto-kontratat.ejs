@@ -1,0 +1,138 @@
+<html>
+<head>
+    <% include partials/head %>
+</head>
+
+<body>
+  <% include partials/header %>
+
+  <div class="kontrata">
+    <div class="container">
+      <div class="row">
+        <div class="offset-md-3 col-md-6">
+          <form action="/kontratat/add" method="post">
+            <div class="row">
+              <div class="col-md-12">
+                <br/>
+                <h2 class="text-primary"><b>Shto kontratën e re</b></h2>
+                <br/>
+                <h4><b>Prokurimi:</b></h4>
+                <br/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="Nr.rendor"> Nr.rendor i prokurimit</label><br/>
+                <input class="form-control" min="1" name="Nrrendor" type="number" placeholder="Nr.rendor i prokurimit" required />
+              </div>
+              <div class="col-md-6">
+                <label for="Lloji"> Lloji i prokurimit</label><br/>
+                <input class="form-control" name="Lloji" type="text" placeholder="Lloji i prokurimit" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 ">
+                <br/>
+                <label for="Aktiviteti">Aktiviteti i prokurimit</label>
+                <input class="form-control" name="Aktiviteti" type="text" placeholder="Aktiviteti i prokurimit" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <br/>
+                <h4><b>Datat:</b></h4>
+                <br/>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <label for="Inicimi"> Data e inicimit të aktiviteteve <br/> të prokurimit</label>
+                <br/>
+                <input class="form-control" name="Inicimi" type="date" required />
+              </div>
+              <div class="col-md-6">
+                <label for="Publikimi"> Data e publikimit <br/> të shpalljës</label>
+                <br/>
+                <input class="form-control" name="Publikimi" type="date" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <br/>
+                <label for="Nenshkrimi"> Data e nënshkrimit të kontratës</label>
+                <br/>
+                <input class="form-control" name="Nenshkrimi" type="date" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <br/>
+                <label for="Afati1"> Afatet për implementimin e kontratës</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <input class="form-control" name="Afati1" type="date" required />
+                <br/>
+              </div>
+              <div class="col-md-6">
+                <input class="form-control" name="Afati2" type="date" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <br/>
+                <label for="Preliminare"> Data e përmbylljes së kontratës (data e pranimit <br/> të perkohshem/preliminar)</label>
+                <br/>
+                <input class="form-control" name="Preliminare" type="date" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <br/>
+                <br/>
+                <h4><b>Çmimi dhe të dhënat tjera:</b></h4>
+                <br/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="Cmimi"> Çmimi i kontratës (duke përfshirë <br/> të gjitha taksat)</label>
+                <br/>
+                <input class="form-control" name="Cmimi" type="text" placeholder="Cmimi i kontrates" required />
+              </div>
+              <div class="col-md-6">
+                <label for="Totali"> Çmimi total i paguar <br/> për kontratën</label>
+                <br/>
+                <input class="form-control" name="Totali" type="text" placeholder="Cmimi total" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <br/>
+                <label for="Kontraktuesi">Emri i të cilit i është dhënë kontrata</label>
+                <br/>
+                <input class="form-control" name="Kontraktuesi" type="text" placeholder="Emri dhe mbiemri" required />
+              </div>
+            </div><br>
+            <div class="row">
+              <div class="col-md-6">
+                <br/>
+                <button type="submit" name="button" class="btn btn-primary btn-block">Dergo</button>
+              </div>
+              <div class="col-md-6">
+                <br/>
+                <button type="reset" value="reset" class="btn btn-default btn-block" >FSHIJ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div><br>
+</body>
+</html>

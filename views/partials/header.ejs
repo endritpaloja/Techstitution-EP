@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-prokurimi">
+    <a class="navbar-brand" href="/">
+        <img src="/img/komuna_prishtines.png" alt="logo" style="width:50px;">
+    </a>
+    <ul class="navbar-nav navbar-nav-left">
+        <li class="nav-item">
+            <a class="nav-link" href="/kontratat">Kontratat</a>
+        </li>
+
+        <% if (user) { %>
+            <li class="nav-item">
+                <a class="nav-link" href="/kontratat/add">Shto Kontrate</a>
+            </li>
+        <% } %>
+    </ul>
+
+    <ul class="navbar-nav">
+
+        <% if (user) { %>
+        <li class="nav-item">
+            <a class="nav-link" href="/register">Shto Perdorues</a>
+        </li>
+        <% } %>
+
+        <% if (user) { %>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Çkyçu</a>
+            </li>
+        <% } else { %>
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Kyçu</a>
+            </li>
+        <% } %>
+
+    </ul>
+</nav>

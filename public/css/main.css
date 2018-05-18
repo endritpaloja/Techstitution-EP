@@ -1,0 +1,62 @@
+body {
+    background: url(http://farm3.static.flickr.com/2438/3907039404_f3245a4ba4_b.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 70%;
+    background-size: cover;
+}
+
+li {
+    display: inline;
+}
+
+.kontrata {
+    margin: 40px 10px;
+    background-color: #eee;
+    padding: 15px;
+}
+
+.navbar ul li {
+    font-size: 16px;
+    font-family: sans-serif;
+    margin: 15px;
+}
+
+#mydiv {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 30em;
+    height: 18em;
+    margin-top: -9em;
+    margin-left: -15em;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    opacity: 0.6;
+}
+
+#hyrja {
+    text-align: center;
+    padding-top: 110px;
+}
+
+.navbar-prokurimi {
+    justify-content: space-between;
+}
+
+.navbar-prokurimi .navbar-nav-left {
+    margin-right: auto;
+}
+
+.index-container{
+    position: relative;
+    text-align: center;
+    color: black;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    background-color: #f3f3f3;
+    opacity: 0.7;
+}
